@@ -8,6 +8,7 @@ export type LogoProps = {
 const Logo = ({ color = 'white', size = 'normal' }: LogoProps) => (
   <S.Wrapper color={color} size={size}>
     <svg
+      fill="none"
       viewBox="0 0 24 24"
       xmlns="http://www.w3.org/2000/svg"
       role="img"
