@@ -1,0 +1,21 @@
+{
+  "name": "Spectrum Boilerplate",
+  "short_name": "Spectrum",
+  "icons": [
+    {
+      "src": "/img/icon-192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "/img/icon-512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "background_color": "#eeaeca",
+  "description": "Starter project with Next, React and Typescript!",
+  "display": "fullscreen",
+  "start_url": "/",
+  "theme_color": "#eeaeca"
+}
