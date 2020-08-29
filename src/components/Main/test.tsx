@@ -7,11 +7,13 @@ describe('<Main />', () => {
     render(<Main />)
 
     expect(
-      screen.getByRole('heading', { name: /spectrum boilerplate/i })
+      screen.getByRole('heading', { name: /github search/i })
     ).toBeInTheDocument()
 
     expect(
-      screen.getByText(/starter project with next, react and typescript!/i)
+      screen.getByText(
+        /an application for search users and users repositories in github/i
+      )
     )
   })
 

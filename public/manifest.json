@@ -1,6 +1,6 @@
 {
-  "name": "Spectrum Boilerplate",
-  "short_name": "Spectrum",
+  "name": "Github Search",
+  "short_name": "Github Search",
   "icons": [
     {
       "src": "/img/icon-192.png",
@@ -14,7 +14,7 @@
     }
   ],
   "background_color": "#eeaeca",
-  "description": "Starter project with Next, React and Typescript!",
+  "description": "An application for search users and users repositories in github",
   "display": "fullscreen",
   "start_url": "/",
   "theme_color": "#eeaeca"

@@ -1,8 +1,8 @@
 import * as S from './styles'
 
 const Main = ({
-  title = 'Spectrum boilerplate',
-  description = 'Starter project with Next, React and Typescript!'
+  title = 'Github Search',
+  description = 'An application for search users and users repositories in github'
 }) => (
   <S.Wrapper>
     <S.Title>{title}</S.Title>
