@@ -20,7 +20,11 @@ describe('<Input />', () => {
   it('should have height of 3rem when input size is small', () => {
     renderWithTheme(<Input {...initialProps} size="small" />)
 
-    expect(screen.getByRole('textbox')).toHaveStyle({ height: '3rem' })
+    expect(screen.getByRole('textbox')).toHaveStyle({
+      height: '3rem',
+      fontSize: '1.6rem'
+    })
+    expect(screen.getByText(/search/i)).toHaveStyle({ fontSize: '1.6rem' })
   })
 
   it('should call the callback function on blur', () => {
