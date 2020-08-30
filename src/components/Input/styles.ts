@@ -3,7 +3,7 @@ import { InputProps } from '.'
 
 const modifiers = {
   spaceBetween: (theme: DefaultTheme) => css`
-    margin: ${theme.spacings.xsmall} 0;
+    margin: ${theme.spacings.small} 0;
   `,
   small: (theme: DefautTheme) => css`
     height: 3rem;

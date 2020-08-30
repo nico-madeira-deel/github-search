@@ -18,6 +18,7 @@ const GlobalStyles = createGlobalStyle`
 
     body {
       background-color: ${theme.colors.darkBlue};
+      color: ${theme.colors.white};
       font-family: ${theme.font.family};
       font-size: ${theme.font.sizes.medium};
     }
