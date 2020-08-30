@@ -34,5 +34,10 @@ export default {
     large: '4.0rem',
     xlarge: '4.8rem',
     xxlarge: '5.6rem'
+  },
+  transitions: {
+    fast: '.3s ease-in-out',
+    normal: '.5s ease-in-out',
+    slow: '.8s ease-in-out'
   }
 }

@@ -7,12 +7,17 @@ const GlobalStyles = createGlobalStyle`
     padding: 0;
   }
 
+  body, html, #__next {
+    height: 100%;
+  }
+
   ${({ theme }) => css`
     html {
       font-size: 62.5%;
     }
 
     body {
+      background-color: ${theme.colors.darkBlue};
       font-family: ${theme.font.family};
       font-size: ${theme.font.sizes.medium};
     }
