@@ -1,6 +1,8 @@
 import styled, { css } from 'styled-components'
 import Input from 'components/Input'
 import Logo from 'components/Logo'
+import { UserProvider } from 'contexts/UserContext'
+import { withContext } from 'hocs/withContext'
 
 const Wrapper = styled.main`
   align-items: center;
@@ -43,4 +45,6 @@ const Home = () => {
   )
 }
 
-export default Home
+Home.displayName = 'Home'
+
+export default withContext(UserProvider, Home)
