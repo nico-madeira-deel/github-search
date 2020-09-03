@@ -5,7 +5,9 @@ import GlobalStyles from 'styles/global'
 import { ThemeProvider } from 'styled-components'
 import theme from 'styles/theme'
 
-function App({ Component, pageProps }: AppProps) {
+import UserProvider from 'contexts/UserContext'
+
+const App = ({ Component, pageProps }: AppProps) => {
   return (
     <ThemeProvider theme={theme}>
       <Head>
@@ -17,10 +19,11 @@ function App({ Component, pageProps }: AppProps) {
         <link rel="shortcut icon" href="/img/icon-512.png" />
         <link rel="apple-touch-icon" href="/img/icon-512.png" />
         <link rel="shortcut icon" href="/img/favicon.ico" />
-        <link rel="manifest" href="/manifest.json" />
       </Head>
       <GlobalStyles />
-      <Component {...pageProps} />
+      <UserProvider>
+        <Component {...pageProps} />
+      </UserProvider>
     </ThemeProvider>
   )
 }

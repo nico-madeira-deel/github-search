@@ -1,6 +1,6 @@
 import api from './api'
 
-type UserResponse = {
+export type UserResponse = {
   avatar_url?: string
   bio?: string
   email?: string
@@ -10,8 +10,25 @@ type UserResponse = {
   name?: string
 }
 
-export function getUserData(username: string) {
-  const response = api.get<UserResponse>(`/users/${username}`)
+type OwnerUserRepositoriesResponse = {
+  id: number
+}
 
-  return response
+export type UserRepositoriesResponse = {
+  description?: string
+  forks: number
+  html_url: string
+  id: number
+  name: string
+  owner: OwnerUserRepositoriesResponse
+  stargazers_count: number
+  watchers: number
+}
+
+export function getUserData(username: string) {
+  return api.get<UserResponse>(`/users/${username}`)
+}
+
+export function getUserRepositoriesData(username: string) {
+  return api.get<UserRepositoriesResponse[]>(`/users/${username}/repos`)
 }

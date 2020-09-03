@@ -1,21 +1,23 @@
-import { createContext, useContext, useMemo, useState } from 'react'
+import { createContext, useContext, useState } from 'react'
 import { useRouter } from 'next/router'
 
-import { getUserData } from 'services/user'
+import {
+  getUserData,
+  getUserRepositoriesData,
+  UserResponse,
+  UserRepositoriesResponse
+} from 'services/user'
 
-export type User = {
-  avatar?: string
-  bio?: string
-  email?: string
-  followers?: number
-  following?: number
-  id: number
-  name?: string
+type Loading = {
+  user: boolean
+  repositories: boolean
 }
 
 type UserContextData = {
-  user: User | null
-  loading: boolean
+  fetchUserData: (username: string) => void
+  user: UserResponse | null
+  userRepositories: UserRepositoriesResponse[] | []
+  loading: Loading
 }
 
 type Props = {
@@ -23,18 +25,28 @@ type Props = {
   children?: any
 }
 
-const initialState = {
-  user: null,
-  loading: false
-}
-
 const UserContext = createContext<UserContextData>({} as UserContextData)
 
-const UserProvider = ({ children }: Props) => {
-  const [state, setState] = useState<UserContextData>(initialState)
+export default function UserProvider({ children }: Props) {
+  const [loading, setLoading] = useState<Loading>({
+    user: false,
+    repositories: false
+  })
+  const [user, setUser] = useState<UserResponse | null>(null)
+  const [userRepositories, setUserRepositories] = useState<
+    UserRepositoriesResponse[]
+  >([])
   const router = useRouter()
 
+  const setterLoading = (value: string, loading: boolean) => {
+    setLoading((prevState) => ({
+      ...prevState,
+      [value]: loading
+    }))
+  }
+
   const fetchUserData = async (username: string) => {
+    setterLoading('user', true)
     try {
       const { data } = await getUserData(username)
 
@@ -50,26 +62,53 @@ const UserProvider = ({ children }: Props) => {
         }
 
         router.push(`/?username=${username}`, undefined, { shallow: true })
-        return formattedUser
+        setUser(formattedUser)
+        fetchUserRepositories(username)
       }
     } catch (error) {
       console.log('error', error)
+    } finally {
+      setterLoading('user', false)
     }
   }
 
-  const value = useMemo(() => {
-    return {
-      setState,
-      state
+  const fetchUserRepositories = async (username: string) => {
+    setterLoading('repositories', true)
+    try {
+      const { data } = await getUserRepositoriesData(username)
+
+      if (data.length) {
+        const formattedRepositories = data
+          .map((repo) => {
+            return {
+              ...(repo?.description && { description: repo.description }),
+              forks: repo.forks,
+              html_url: repo.html_url,
+              id: repo.id,
+              name: repo.name,
+              owner: repo.owner,
+              stargazers_count: repo.stargazers_count,
+              watchers: repo.watchers
+            }
+          })
+          .sort((a, b) => b.stargazers_count - a.stargazers_count)
+
+        setUserRepositories(formattedRepositories)
+      }
+    } catch (error) {
+      console.log('error', error)
+    } finally {
+      setterLoading('repositories', false)
     }
-  }, [state])
+  }
 
   return (
     <UserContext.Provider
       value={{
         fetchUserData,
-        loading: value.state.loading,
-        user: value.state.user
+        loading,
+        user,
+        userRepositories
       }}
     >
       {children}
@@ -77,7 +116,7 @@ const UserProvider = ({ children }: Props) => {
   )
 }
 
-function useUser() {
+export const useUser = () => {
   const context = useContext(UserContext)
 
   if (!context) {
@@ -86,5 +125,3 @@ function useUser() {
 
   return context
 }
-
-export { UserProvider, useUser }
