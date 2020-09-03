@@ -1,0 +1,45 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Button /> should render the button 1`] = `
+.c0 {
+  border: none;
+  cursor: pointer;
+  background-color: #ffd6ba;
+  border-radius: 0.5rem;
+  color: #555b6e;
+  font-size: 1.6rem;
+  font-weight: 700;
+  padding: 0.8rem 2.4rem;
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+  -webkit-transition: -webkit-transform .3s ease-in-out;
+  -webkit-transition: transform .3s ease-in-out;
+  transition: transform .3s ease-in-out;
+}
+
+.c0:hover,
+.c0:focus {
+  -webkit-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  transform: scale(1.1);
+  -webkit-transition: -webkit-transform .3s ease-in-out;
+  -webkit-transition: transform .3s ease-in-out;
+  transition: transform .3s ease-in-out;
+}
+
+.c0:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+}
+
+<button
+  class="c0"
+  type="button"
+>
+  Button
+</button>
+`
