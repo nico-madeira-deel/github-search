@@ -22,10 +22,7 @@ export default {
     blue: '#89b0ae',
     lightBlue: '#bee3db',
     white: '#faf9f9',
-    pink: '#ffd6ba',
-    lightGray: '#cccccc',
-    gray: '#666666',
-    darkGray: '#333333'
+    pink: '#ffd6ba'
   },
   spacings: {
     xxsmall: '0.8rem',
