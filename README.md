@@ -39,7 +39,44 @@ To run the project on your machine follow the steps below:
 
 ---
 
+## Commands
+
+### Start the project locally
+`yarn dev`
+
+### Build the project
+`yarn build`
+
+### Start the build bundler
+`yarn start`
+
+### Start the storybook documentation locally
+`yarn storybook`
+
+### Build the storybook for production
+`yarn build-storybook`
+
+### Generate components in a easy way
+`yarn generate`
+
+### Check for syntax errors or warnings
+`yarn lint`
+
+### Test all the components
+`yarn test`
+
+### Watch the components tests
+`yarn test:watch`
+
+### Open cypress in the browser to see e2e tests
+`yarn test:e2e`
+
+### Run cypress to see coverage in the terminal
+`yarn test:e2e:run`
+
+---
+
 ## Production
 
-The project its also alive in production, just access the website link: [Github Search]()
+The project its also alive in production, just access the website link: [Github Search](github-search-nico.vercel.app)
 
