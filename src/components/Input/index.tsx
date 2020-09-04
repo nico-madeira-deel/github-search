@@ -2,7 +2,8 @@ import { useState } from 'react'
 import * as S from './styles'
 
 export type InputProps = {
-  callbackInput: (value: string) => void
+  callbackOnBlur: (value: string) => void
+  callbackOnChange?: (value: string) => void
   label?: string
   name?: string
   size?: 'normal' | 'small'
@@ -11,7 +12,8 @@ export type InputProps = {
 }
 
 const Input = ({
-  callbackInput,
+  callbackOnBlur,
+  callbackOnChange,
   label = 'Search',
   name = 'search',
   size = 'normal',
@@ -29,8 +31,11 @@ const Input = ({
         aria-label={name}
         id={name}
         name={name}
-        onBlur={() => callbackInput(inputValue)}
-        onChange={(event) => setInputValue(event.target.value)}
+        onBlur={() => callbackOnBlur(inputValue)}
+        onChange={(event) => {
+          setInputValue(event.target.value)
+          callbackOnChange(event.target.value)
+        }}
         size={size}
         type={type}
         value={inputValue}

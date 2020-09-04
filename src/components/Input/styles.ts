@@ -6,7 +6,7 @@ const modifiers = {
     margin: ${theme.spacings.small} 0;
   `,
   small: (theme: DefautTheme) => css`
-    height: 3rem;
+    height: 3.4rem;
     font-size: ${theme.font.sizes.medium};
   `,
   normal: (theme: DefaultTheme) => css`

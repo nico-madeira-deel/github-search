@@ -3,7 +3,7 @@ import Input, { InputProps } from '.'
 
 export default {
   argTypes: {
-    callbackInput: {
+    callbackOnBlur: {
       type: 'function'
     }
   },
@@ -14,5 +14,5 @@ export default {
 export const Basic: Story<InputProps> = (args) => <Input {...args} />
 
 Basic.args = {
-  callbackInput: () => console.log('test')
+  callbackOnBlur: () => console.log('test')
 }
