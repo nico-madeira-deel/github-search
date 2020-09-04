@@ -6,4 +6,6 @@ export default {
   component: Card
 } as Meta
 
-export const Basic: Story = (args) => <Card {...args} />
+export const Basic: Story = (args) => (
+  <Card {...args}>Test for doc in storybook</Card>
+)
