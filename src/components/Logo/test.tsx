@@ -21,7 +21,7 @@ describe('<Logo />', () => {
   })
 
   it('should render a normal size by default', () => {
-    renderWithTheme(<Logo size="small" />)
+    renderWithTheme(<Logo />)
 
     expect(screen.getByLabelText(/github/i).parentElement).toHaveStyle({
       width: '5rem'
@@ -32,7 +32,7 @@ describe('<Logo />', () => {
     renderWithTheme(<Logo size="small" />)
 
     expect(screen.getByLabelText(/github/i).parentElement).toHaveStyle({
-      width: '5rem'
+      width: '3rem'
     })
   })
 })

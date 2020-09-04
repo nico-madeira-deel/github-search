@@ -6,6 +6,6 @@ export const Wrapper = styled.div<LogoProps>`
   ${({ theme, color, size }) => css`
     color: ${theme.colors[color!]};
     height: auto;
-    width: ${!!size && size === 'small' ? '5rem' : '10rem'};
+    width: ${!!size && size === 'small' ? '3rem' : '5rem'};
   `}
 `
