@@ -70,7 +70,7 @@ export default function UserProvider({ children }: Props) {
       }
     } catch (error) {
       setUserRepositories([])
-      setUser([])
+      setUser(null)
       if (error.response.status === 404) {
         setUserNotFound(true)
       }
