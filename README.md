@@ -3,7 +3,7 @@
 ![Image of the initial page of the project](https://i.imgur.com/FLmr0Cb.png)
 ![Image of the results page of the project](https://i.imgur.com/tjyu6Xw.png)
 
-A web application to for Github users and repositories.
+A web application for search users and repositories in Github.
 
 ---
 
