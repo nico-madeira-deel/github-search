@@ -7,8 +7,17 @@ const GlobalStyles = createGlobalStyle`
     padding: 0;
   }
 
-  body, html, #__next {
+  a {
+    text-decoration: none;
+  }
+
+  html, body, #__next {
     height: 100%;
+  }
+
+  a:active,
+  a:visited {
+    color: inherit;
   }
 
   ${({ theme }) => css`

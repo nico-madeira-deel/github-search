@@ -9,6 +9,7 @@ export default {
     normal: 400,
     bold: 700,
     sizes: {
+      xsmall: '1.2rem',
       small: '1.4rem',
       medium: '1.6rem',
       large: '1.8rem',
@@ -39,5 +40,10 @@ export default {
     fast: '.3s ease-in-out',
     normal: '.5s ease-in-out',
     slow: '.8s ease-in-out'
+  },
+  mediaQuery: {
+    mobile: 480,
+    tablet: 768,
+    desktop: 1024
   }
 }
