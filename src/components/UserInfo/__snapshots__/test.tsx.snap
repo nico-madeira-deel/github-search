@@ -85,7 +85,9 @@ exports[`<UserInfo /> should render the user info 1`] = `
         src="https://avatars3.githubusercontent.com/u/20728141?v=4"
       />
     </picture>
-    <h2>
+    <h2
+      data-testid="username"
+    >
       Nico Madeira
     </h2>
     <p>
@@ -98,6 +100,7 @@ exports[`<UserInfo /> should render the user info 1`] = `
       class="c3"
     >
       <a
+        data-testid="followers"
         href="https://github.com/nicomadeira?tab=followers"
         rel="noopener noreferrer"
         target="_blank"
@@ -108,6 +111,7 @@ exports[`<UserInfo /> should render the user info 1`] = `
         </small>
       </a>
       <a
+        data-testid="following"
         href="https://github.com/nicomadeira?tab=following"
         rel="noopener noreferrer"
         target="_blank"

@@ -18,7 +18,17 @@ const ListRepositories = styled.ul`
   justify-content: space-between;
 
   ${({ theme }) => css`
-    margin: ${theme.spacings.medium} 0;
+    margin: ${theme.spacings.small} 0;
+  `}
+`
+
+const Wrapper = styled.div`
+  text-align: center;
+
+  ${({ theme }) => css`
+    h2 {
+      margin-top: ${theme.spacings.small};
+    }
   `}
 `
 
@@ -40,20 +50,25 @@ const Results = () => {
 
   return (
     <Layout condensed>
-      <>
+      <Wrapper>
+        <h2>User</h2>
         {loading.user ? <Loader isCenter /> : null}
         {user && Object.keys(user).length ? <UserInfo {...user} /> : null}
         {userNotFound ? (
-          <Card>User not found! Try again or search for other.</Card>
+          <Card>
+            <p data-testid="user-not-found">
+              User not found! Try again or search for other.
+            </p>
+          </Card>
         ) : null}
-      </>
+      </Wrapper>
       <>
         {!userNotFound ? (
           <Repositories>
             <h2>User Repositories</h2>
             {loading.repositories ? <Loader isCenter /> : null}
             {userRepositories.length && !emptyRepositories ? (
-              <ListRepositories>
+              <ListRepositories data-testid="list-repositories">
                 {userRepositories.map((repo: UserRepositoriesResponse) => (
                   <UserRepositories key={repo.id} {...repo} />
                 ))}
@@ -63,7 +78,10 @@ const Results = () => {
         ) : null}
         {emptyRepositories ? (
           <Card>
-            Ops. We did not find a repository. Maybe the user does not have one.
+            <p data-testid="repositories-not-found">
+              Ops. We did not find a repository. Maybe the user does not have
+              one.
+            </p>
           </Card>
         ) : null}
       </>

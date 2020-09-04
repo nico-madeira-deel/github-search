@@ -30,18 +30,26 @@ const UserInfo = ({
             <img alt={`Avatar image for the user ${login}`} src={avatar_url} />
           </S.Picture>
         ) : null}
-        <h2>{name || login}</h2>
+        <h2 data-testid="username">{name || login}</h2>
         {bio ? <p>{bio}</p> : null}
         {email ? <p>{email}</p> : null}
         {userUrl ? (
           <S.Followers>
             <Link href={`${userUrl}followers`} passHref={true}>
-              <a target="_blank" rel="noopener noreferrer">
+              <a
+                data-testid="followers"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <small>Followers: {followers}</small>
               </a>
             </Link>
             <Link href={`${userUrl}following`} passHref={true}>
-              <a target="_blank" rel="noopener noreferrer">
+              <a
+                data-testid="following"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <small>Following: {following}</small>
               </a>
             </Link>
