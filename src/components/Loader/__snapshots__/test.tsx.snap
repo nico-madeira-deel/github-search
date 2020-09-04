@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Loader /> should render the loader properly 1`] = `
+.c0 {
+  -webkit-animation: spin 1s linear infinite;
+  animation: spin 1s linear infinite;
+  border-radius: 50%;
+  height: 3rem;
+  width: 3rem;
+  border: 5px solid #89b0ae;
+  border-left-color: #555b6e;
+  margin: 1.6rem 0;
+}
+
+<div
+  class="c0"
+  data-testid="loader"
+/>
+`
