@@ -8,3 +8,14 @@ export const mockUser = {
   login: 'nicomadeira',
   email: 'nicollemguimaraes@gmail.com'
 }
+
+export const mockRepository = {
+  description:
+    'React is an open source JavaScript library used for designing user interfaces.',
+  forks: 30500,
+  id: 1,
+  html_url: 'https://github.com/facebook/react',
+  name: 'React',
+  stargazers_count: 155000,
+  watchers: 6700
+}

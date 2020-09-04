@@ -1,0 +1,129 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<UserRepositories /> should render properly 1`] = `
+.c0 {
+  cursor: pointer;
+  list-style: none;
+  background-color: #faf9f9;
+  border-radius: 0.5rem;
+  color: #555b6e;
+  margin-right: 1.6rem;
+  margin-bottom: 1.6rem;
+  padding: 1.6rem 0.8rem;
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+  -webkit-transition: -webkit-transform .3s ease-in-out;
+  -webkit-transition: transform .3s ease-in-out;
+  transition: transform .3s ease-in-out;
+  width: calc((100% / 3) - 1.6rem);
+}
+
+.c0:hover {
+  -webkit-transform: scale(1.025);
+  -ms-transform: scale(1.025);
+  transform: scale(1.025);
+  -webkit-transition: -webkit-transform .3s ease-in-out;
+  -webkit-transition: transform .3s ease-in-out;
+  transition: transform .3s ease-in-out;
+}
+
+.c0:nth-of-type(3n - 0),
+.c0:last-of-type {
+  margin-right: 0;
+}
+
+.c0 h3 {
+  font-size: 1.6rem;
+  word-break: break-word;
+}
+
+.c0 p {
+  font-size: 1.4rem;
+  margin: 1.6rem 0;
+}
+
+.c0 a {
+  color: #555b6e;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.c1 {
+  --spacing-tag: 0.4rem;
+  display: block;
+  margin-top: var(--spacing-tag);
+  border-radius: 0.5rem;
+  font-size: 1.2rem;
+  font-weight: 700;
+  padding: var(--spacing-tag);
+}
+
+.c1:nth-of-type(1) {
+  background-color: #ffd6ba;
+}
+
+.c1:nth-of-type(2) {
+  background-color: #bee3db;
+}
+
+.c1:nth-of-type(3) {
+  background-color: #89b0ae;
+}
+
+@media (max-width:480px) {
+  .c0 {
+    margin-right: 0;
+    width: 100%;
+  }
+}
+
+<li
+  class="c0"
+>
+  <a
+    href="https://github.com/facebook/react"
+    rel="noopener noreferrer"
+    target="_blank"
+  >
+    <h3>
+      React
+    </h3>
+    <p
+      data-testid="repository-description"
+    >
+      React is an open source JavaScript library used for designing user interfaces.
+    </p>
+    <span>
+      <span
+        class="c1"
+      >
+        Forks: 
+        30500
+      </span>
+      <span
+        class="c1"
+      >
+        Stars: 
+        155000
+      </span>
+      <span
+        class="c1"
+      >
+        Watchers: 
+        6700
+      </span>
+    </span>
+  </a>
+</li>
+`
