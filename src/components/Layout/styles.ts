@@ -1,9 +1,9 @@
-import styled, { css } from 'styled-components'
+import styled, { css, DefaultTheme } from 'styled-components'
 import { LayoutProps } from '.'
 
 const modifiers = {
   condensed: {
-    wrapper: (theme) => css`
+    wrapper: (theme: DefaultTheme) => css`
       height: auto;
 
       & > div {
