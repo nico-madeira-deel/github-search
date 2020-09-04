@@ -18,7 +18,7 @@ describe('<Input />', () => {
   })
 
   it('should have height of 3rem when input size is small', () => {
-    renderWithTheme(<Input {...initialProps} size="small" />)
+    renderWithTheme(<Input {...initialProps} inputSize="small" />)
 
     expect(screen.getByRole('textbox')).toHaveStyle({
       height: '3.4rem',

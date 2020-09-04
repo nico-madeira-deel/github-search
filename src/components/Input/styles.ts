@@ -4,14 +4,6 @@ import { InputProps } from '.'
 const modifiers = {
   spaceBetween: (theme: DefaultTheme) => css`
     margin: ${theme.spacings.small} 0;
-  `,
-  small: (theme: DefautTheme) => css`
-    height: 3.4rem;
-    font-size: ${theme.font.sizes.medium};
-  `,
-  normal: (theme: DefaultTheme) => css`
-    height: 5rem;
-    font-size: ${theme.font.sizes.large};
   `
 }
 
@@ -27,7 +19,7 @@ export const Wrapper = styled.div<InputProps>`
 `
 
 export const Input = styled.input<InputProps>`
-  ${({ theme, size }) => css`
+  ${({ theme, inputSize }) => css`
     background-color: transparent;
     border: 0.2rem solid ${theme.colors.white};
     border-radius: ${theme.border.radius};
@@ -40,14 +32,22 @@ export const Input = styled.input<InputProps>`
       border-width: 0.4rem;
     }
 
-    ${!!size && modifiers[size!](theme)}
+    ${!!inputSize && inputSize === 'small'
+      ? `
+      height: 3.4rem;
+      font-size: ${theme.font.sizes.medium};
+    `
+      : `
+      height: 5rem;
+      font-size: ${theme.font.sizes.large};
+    `}
   `}
 `
 
 export const Label = styled.label<InputProps>`
-  ${({ theme, size }) => css`
+  ${({ theme, inputSize }) => css`
     color: ${theme.colors.white};
-    font-size: ${!!size && size === 'small'
+    font-size: ${!!inputSize && inputSize === 'small'
       ? theme.font.sizes.medium
       : theme.font.sizes.large};
     margin-bottom: ${theme.spacings.xxsmall};

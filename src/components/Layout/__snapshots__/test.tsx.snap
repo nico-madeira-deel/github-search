@@ -122,8 +122,8 @@ exports[`<Layout /> should render the layout condensed when required 1`] = `
   -webkit-transition: border-width .5s ease-in-out;
   transition: border-width .5s ease-in-out;
   outline: none;
-  height: 3.4rem;
-  font-size: 1.6rem;
+  height: 5rem;
+  font-size: 1.8rem;
 }
 
 .c7:focus {
@@ -132,7 +132,7 @@ exports[`<Layout /> should render the layout condensed when required 1`] = `
 
 .c6 {
   color: #faf9f9;
-  font-size: 1.6rem;
+  font-size: 1.8rem;
   margin-bottom: 0.8rem;
 }
 

@@ -2,11 +2,11 @@ import { useState } from 'react'
 import * as S from './styles'
 
 export type InputProps = {
-  callbackOnBlur: (value: string) => void
+  callbackOnBlur?: (value: string) => void
   callbackOnChange?: (value: string) => void
   label?: string
   name?: string
-  size?: 'normal' | 'small'
+  inputSize?: 'normal' | 'small'
   spaceBetween?: boolean
   type?: string
 }
@@ -16,7 +16,7 @@ const Input = ({
   callbackOnChange,
   label = 'Search',
   name = 'search',
-  size = 'normal',
+  inputSize = 'normal',
   spaceBetween = false,
   type = 'text'
 }: InputProps) => {
@@ -24,19 +24,25 @@ const Input = ({
 
   return (
     <S.Wrapper spaceBetween={spaceBetween}>
-      <S.Label htmlFor={name} size={size}>
+      <S.Label htmlFor={name} inputSize={inputSize}>
         {label}
       </S.Label>
       <S.Input
         aria-label={name}
         id={name}
         name={name}
-        onBlur={() => callbackOnBlur(inputValue)}
+        onBlur={() => {
+          if (callbackOnBlur) {
+            callbackOnBlur(inputValue)
+          }
+        }}
         onChange={(event) => {
           setInputValue(event.target.value)
-          callbackOnChange(event.target.value)
+          if (callbackOnChange) {
+            callbackOnChange(event.target.value)
+          }
         }}
-        size={size}
+        inputSize={inputSize}
         type={type}
         value={inputValue}
       />
