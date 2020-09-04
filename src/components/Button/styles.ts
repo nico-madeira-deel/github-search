@@ -3,6 +3,7 @@ import styled, { css } from 'styled-components'
 export const Wrapper = styled.button`
   border: none;
   cursor: pointer;
+  outline: none;
 
   ${({ theme }) => css`
     background-color: ${theme.colors.pink};
