@@ -29,11 +29,11 @@ const Layout = ({ children, condensed = false }: LayoutProps) => {
     <S.Wrapper data-testid="layout" condensed={condensed}>
       <S.Header>
         <Logo size={condensed ? 'small' : 'normal'} />
-        <S.Title>Github Search</S.Title>
+        <S.Title data-testid="main-title">Github Search</S.Title>
       </S.Header>
       <S.Main>
         {!condensed ? (
-          <S.Description>
+          <S.Description data-testid="main-description">
             An application for search users and users repositories in github
           </S.Description>
         ) : null}

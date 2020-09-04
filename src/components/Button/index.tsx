@@ -8,7 +8,12 @@ export type ButtonProps = {
 }
 
 const Button = ({ children, disabled = false, onClick }: ButtonProps) => (
-  <S.Wrapper disabled={disabled} onClick={onClick} type="button">
+  <S.Wrapper
+    data-testid="button"
+    disabled={disabled}
+    onClick={onClick}
+    type="button"
+  >
     {children}
   </S.Wrapper>
 )

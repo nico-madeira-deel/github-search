@@ -198,6 +198,7 @@ exports[`<Layout /> should render the layout condensed when required 1`] = `
     </div>
     <h1
       class="c3"
+      data-testid="main-title"
     >
       Github Search
     </h1>
@@ -228,6 +229,7 @@ exports[`<Layout /> should render the layout condensed when required 1`] = `
       </div>
       <button
         class="c8"
+        data-testid="button"
         disabled=""
         type="button"
       >
@@ -401,6 +403,7 @@ exports[`<Layout /> should render the layout properly 1`] = `
     </div>
     <h1
       class="c3"
+      data-testid="main-title"
     >
       Github Search
     </h1>
@@ -410,6 +413,7 @@ exports[`<Layout /> should render the layout properly 1`] = `
   >
     <p
       class="c5"
+      data-testid="main-description"
     >
       An application for search users and users repositories in github
     </p>
@@ -436,6 +440,7 @@ exports[`<Layout /> should render the layout properly 1`] = `
       </div>
       <button
         class="c9"
+        data-testid="button"
         disabled=""
         type="button"
       >
