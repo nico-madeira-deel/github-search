@@ -50,8 +50,6 @@ export default function UserProvider({ children }: Props) {
     try {
       const { data } = await getUserData(username)
 
-      console.log(data)
-
       if (Object.keys(data).length) {
         const formattedUser = {
           ...(data?.avatar_url && { avatar_url: data.avatar_url }),
