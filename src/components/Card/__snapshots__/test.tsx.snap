@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Card /> should render the heading 1`] = `
+.c0 {
+  width: 100%;
+  background-color: #faf9f9;
+  color: #555b6e;
+  border-radius: 0.5rem;
+  margin: 3.2rem 0;
+  padding: 2.4rem;
+}
+
+<section
+  class="c0"
+/>
+`

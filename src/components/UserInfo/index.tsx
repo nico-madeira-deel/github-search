@@ -3,6 +3,7 @@ import * as S from './styles'
 import Link from 'next/link'
 
 import { UserResponse } from 'models/user'
+import Card from 'components/Card'
 
 const UserInfo = ({
   avatar_url,
@@ -22,7 +23,7 @@ const UserInfo = ({
   }, [login])
 
   return (
-    <S.Card>
+    <Card>
       <S.Wrapper>
         {avatar_url ? (
           <S.Picture>
@@ -47,7 +48,7 @@ const UserInfo = ({
           </S.Followers>
         ) : null}
       </S.Wrapper>
-    </S.Card>
+    </Card>
   )
 }
 

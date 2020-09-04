@@ -1,23 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<UserInfo /> should render the user info 1`] = `
-.c0 {
-  width: 100%;
-  background-color: #faf9f9;
-  color: #555b6e;
-  border-radius: 0.5rem;
-  margin: 3.2rem 0;
-  padding: 2.4rem;
-}
-
-.c0 h2 {
-  margin-bottom: 0.8rem;
-}
-
-.c0 p {
-  font-size: 1.4rem;
-}
-
 .c1 {
   -webkit-align-items: center;
   -webkit-box-align: center;
@@ -33,6 +16,14 @@ exports[`<UserInfo /> should render the user info 1`] = `
   margin: 0 auto;
   max-width: 300px;
   text-align: center;
+}
+
+.c1 h2 {
+  margin-bottom: 0.8rem;
+}
+
+.c1 p {
+  font-size: 1.4rem;
 }
 
 .c2 {
@@ -69,6 +60,15 @@ exports[`<UserInfo /> should render the user info 1`] = `
 
 .c3 a:first-child {
   margin-right: 0.8rem;
+}
+
+.c0 {
+  width: 100%;
+  background-color: #faf9f9;
+  color: #555b6e;
+  border-radius: 0.5rem;
+  margin: 3.2rem 0;
+  padding: 2.4rem;
 }
 
 <section

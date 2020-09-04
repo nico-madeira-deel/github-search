@@ -1,15 +1,14 @@
 import styled, { css } from 'styled-components'
 
-export const Card = styled.section`
-  width: 100%;
+export const Wrapper = styled.div`
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  max-width: 300px;
+  text-align: center;
 
   ${({ theme }) => css`
-    background-color: ${theme.colors.white};
-    color: ${theme.colors.darkBlue};
-    border-radius: ${theme.border.radius};
-    margin: ${theme.spacings.medium} 0;
-    padding: ${theme.spacings.small};
-
     h2 {
       margin-bottom: ${theme.spacings.xxsmall};
     }
@@ -18,15 +17,6 @@ export const Card = styled.section`
       font-size: ${theme.font.sizes.small};
     }
   `}
-`
-
-export const Wrapper = styled.div`
-  align-items: center;
-  display: flex;
-  flex-direction: column;
-  margin: 0 auto;
-  max-width: 300px;
-  text-align: center;
 `
 
 export const Picture = styled.picture`
