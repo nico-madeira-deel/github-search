@@ -69,9 +69,11 @@ const Results = () => {
             {loading.repositories ? <Loader isCenter /> : null}
             {userRepositories.length && !emptyRepositories ? (
               <ListRepositories data-testid="list-repositories">
-                {userRepositories.map((repo: UserRepositoriesResponse) => (
-                  <UserRepositories key={repo.id} {...repo} />
-                ))}
+                {(userRepositories as UserRepositoriesResponse[]).map(
+                  (repo: UserRepositoriesResponse) => (
+                    <UserRepositories key={repo.id} {...repo} />
+                  )
+                )}
               </ListRepositories>
             ) : null}
           </Repositories>

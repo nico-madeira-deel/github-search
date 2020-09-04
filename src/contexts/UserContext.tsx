@@ -21,7 +21,6 @@ type UserContextData = {
 type Props = {
   //eslint-disable-next-line @typescript-eslint/no-explicit-any
   children?: any
-  value: UserContextData
 }
 
 const UserContext = createContext<UserContextData>({} as UserContextData)
