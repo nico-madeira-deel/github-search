@@ -1,0 +1,123 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<UserInfo /> should render the user info 1`] = `
+.c0 {
+  width: 100%;
+  background-color: #faf9f9;
+  color: #555b6e;
+  border-radius: 0.5rem;
+  margin: 3.2rem 0;
+  padding: 2.4rem;
+}
+
+.c0 h2 {
+  margin-bottom: 0.8rem;
+}
+
+.c0 p {
+  font-size: 1.4rem;
+}
+
+.c1 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  margin: 0 auto;
+  max-width: 300px;
+  text-align: center;
+}
+
+.c2 {
+  border-radius: 100%;
+  display: block;
+  height: 12rem;
+  overflow: hidden;
+  width: 12rem;
+  border: 4px solid #555b6e;
+  margin-bottom: 1.6rem;
+}
+
+.c2 img {
+  height: auto;
+  max-width: 100%;
+}
+
+.c3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 1.6rem;
+}
+
+.c3 a {
+  background-color: #ffd6ba;
+  border-radius: 0.5rem;
+  color: #555b6e;
+  font-size: 1.2rem;
+  font-weight: 700;
+  padding: 0.8rem;
+}
+
+.c3 a:first-child {
+  margin-right: 0.8rem;
+}
+
+<section
+  class="c0"
+>
+  <div
+    class="c1"
+  >
+    <picture
+      class="c2"
+    >
+      <img
+        alt="Avatar image for the user nicomadeira"
+        src="https://avatars3.githubusercontent.com/u/20728141?v=4"
+      />
+    </picture>
+    <h2>
+      Nico Madeira
+    </h2>
+    <p>
+      Front-End Developer & Mentor no projeto EducaTransforma.
+    </p>
+    <p>
+      nicollemguimaraes@gmail.com
+    </p>
+    <div
+      class="c3"
+    >
+      <a
+        href="https://github.com/nicomadeira?tab=followers"
+        rel="noopener noreferrer"
+        target="_blank"
+      >
+        <small>
+          Followers: 
+          28
+        </small>
+      </a>
+      <a
+        href="https://github.com/nicomadeira?tab=following"
+        rel="noopener noreferrer"
+        target="_blank"
+      >
+        <small>
+          Following: 
+          43
+        </small>
+      </a>
+    </div>
+  </div>
+</section>
+`
