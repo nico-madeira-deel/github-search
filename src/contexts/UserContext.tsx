@@ -14,6 +14,7 @@ type UserContextData = {
   fetchUserData: (username: string) => void
   user: UserResponse | null
   userRepositories: UserRepositoriesResponse[] | []
+  userNotFound: boolean
   loading: Loading
 }
 
@@ -30,6 +31,7 @@ export default function UserProvider({ children }: Props) {
     user: false,
     repositories: false
   })
+  const [userNotFound, setUserNotFound] = useState(false)
   const [user, setUser] = useState<UserResponse | null>(null)
   const [userRepositories, setUserRepositories] = useState<
     UserRepositoriesResponse[]
@@ -37,10 +39,10 @@ export default function UserProvider({ children }: Props) {
   const [emptyRepositories, setEmptyRepositories] = useState(false)
   const router = useRouter()
 
-  const setterLoading = (value: string, loading: boolean) => {
+  const setterLoading = (key: string, value: boolean) => {
     setLoading((prevState) => ({
       ...prevState,
-      [value]: loading
+      [key]: value
     }))
   }
 
@@ -64,9 +66,14 @@ export default function UserProvider({ children }: Props) {
 
         setUser(formattedUser)
         fetchUserRepositories(username)
+        setUserNotFound(false)
       }
     } catch (error) {
-      console.log('error', error)
+      setUserRepositories([])
+      setUser([])
+      if (error.response.status === 404) {
+        setUserNotFound(true)
+      }
     } finally {
       if (router.pathname === '/') {
         router.push('/results')
@@ -96,6 +103,7 @@ export default function UserProvider({ children }: Props) {
           .sort((a, b) => b.stargazers_count - a.stargazers_count)
 
         setUserRepositories(formattedRepositories)
+        setEmptyRepositories(false)
       } else {
         setEmptyRepositories(true)
       }
@@ -113,6 +121,7 @@ export default function UserProvider({ children }: Props) {
         fetchUserData,
         loading,
         user,
+        userNotFound,
         userRepositories
       }}
     >
