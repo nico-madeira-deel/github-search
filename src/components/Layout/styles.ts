@@ -45,12 +45,13 @@ export const Wrapper = styled.div<LayoutProps>`
   justify-content: center;
   max-width: 500px;
   margin: 0 auto;
-  padding: 0 10px;
   text-align: center;
   width: 100%;
 
   ${({ condensed, theme }) => css`
     transition: all ${theme.transitions.fast};
+    padding: 0 ${theme.spacings.xsmall};
+    padding-top: ${theme.spacings.xsmall};
     ${condensed && modifiers.condensed.wrapper(theme)}
   `}
 `

@@ -24,11 +24,12 @@ exports[`<Layout /> should render the layout condensed when required 1`] = `
   justify-content: center;
   max-width: 500px;
   margin: 0 auto;
-  padding: 0 10px;
   text-align: center;
   width: 100%;
   -webkit-transition: all .3s ease-in-out;
   transition: all .3s ease-in-out;
+  padding: 0 1.6rem;
+  padding-top: 1.6rem;
   height: auto;
 }
 
@@ -138,6 +139,7 @@ exports[`<Layout /> should render the layout condensed when required 1`] = `
 .c8 {
   border: none;
   cursor: pointer;
+  outline: none;
   background-color: #ffd6ba;
   border-radius: 0.5rem;
   color: #555b6e;
@@ -260,11 +262,12 @@ exports[`<Layout /> should render the layout properly 1`] = `
   justify-content: center;
   max-width: 500px;
   margin: 0 auto;
-  padding: 0 10px;
   text-align: center;
   width: 100%;
   -webkit-transition: all .3s ease-in-out;
   transition: all .3s ease-in-out;
+  padding: 0 1.6rem;
+  padding-top: 1.6rem;
 }
 
 .c1 {
@@ -339,6 +342,7 @@ exports[`<Layout /> should render the layout properly 1`] = `
 .c9 {
   border: none;
   cursor: pointer;
+  outline: none;
   background-color: #ffd6ba;
   border-radius: 0.5rem;
   color: #555b6e;
