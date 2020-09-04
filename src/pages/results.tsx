@@ -43,10 +43,10 @@ const Results = () => {
   const router = useRouter()
 
   useEffect(() => {
-    if (!user && !userNotFound) {
+    if (loading && !loading.user && !user && !userNotFound) {
       router.push('/')
     }
-  }, [router, user, userNotFound])
+  }, [router, loading, user, userNotFound])
 
   return (
     <Layout condensed>

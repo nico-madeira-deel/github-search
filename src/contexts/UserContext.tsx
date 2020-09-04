@@ -12,7 +12,7 @@ type Loading = {
 type UserContextData = {
   emptyRepositories: boolean
   fetchUserData: (username: string) => void
-  user: UserResponse | null
+  user?: UserResponse | null
   userRepositories: UserRepositoriesResponse[] | []
   userNotFound: boolean
   loading: Loading
