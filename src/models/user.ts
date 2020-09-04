@@ -9,17 +9,12 @@ export type UserResponse = {
   name?: string
 }
 
-type OwnerUserRepositoriesResponse = {
-  id: number
-}
-
 export type UserRepositoriesResponse = {
   description?: string
   forks: number
   html_url: string
   id: number
   name: string
-  owner: OwnerUserRepositoriesResponse
   stargazers_count: number
   watchers: number
 }
