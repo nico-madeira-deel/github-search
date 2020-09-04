@@ -41,7 +41,7 @@ const Layout = ({ children, condensed = false }: LayoutProps) => {
           <Input
             callbackOnBlur={(value) => handleInputBlur(value)}
             callbackOnChange={(value) => handleInputChange(value)}
-            size={condensed ? 'small' : 'normal'}
+            inputSize={condensed ? 'small' : 'normal'}
             spaceBetween={!condensed}
           />
           <Button
