@@ -78,5 +78,5 @@ To run the project on your machine follow the steps below:
 
 ## Production
 
-The project its also alive in production, just access the website link: [Github Search](github-search-nico.vercel.app)
+The project its also alive in production, just access the website link: [Github Search](https://github-search-nico.vercel.app/)
 
